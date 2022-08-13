@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/104efe6595.js" crossorigin="anonymous"></script>
+  <title>NoteAPP</title>
+</head>
+
+<body>
+  <nav class="nav-main">
+    <button class="nav-options add-card" id="addButton">
+      <i class="fa-solid fa-plus"></i>
+    </button>
+    <button class="nav-options delete-card" id="deleteCard">
+      <i class="fa-solid fa-trash-can"></i>
+    </button>
+  </nav>
+
+  <main class="main" id="mainContainer">
+    <section class="cards colorMain0">
+      <button class="delete-button delete-disabled">
+        <i class="fa-solid fa-trash-can"></i>
+      </button>
+      <textarea class="text-input textToCopy"></textarea>
+
+      <nav class="nav-card">
+        <button class="save color0">Save</button>
+        <button class="copyButton color0">Copy to clipboard</button>
+        <button class="openOptions color0">
+          <i class="fa-solid fa-ellipsis"></i>
+        </button>
+      </nav>
+
+      <nav class="more-options no-show">
+        <button class="share color0">
+          <i class="fa-solid fa-share"></i>
+        </button>
+        <div class="colors-select-container color0">
+          <button class="colors-select"></button>
+          <button class="colors-select"></button>
+          <button class="colors-select"></button>
+        </div>
+        <button class="close-options color0">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </nav>
+    </section>
+  </main>
+
+  <!-- Script -->
+  <script src="app.js" type="module"></script>
+</body>
+
+</html>

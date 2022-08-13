@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+:root {
+    --fontColor: #555B6E;
+    --backgroundColor: #EAEEEF;
+
+    /* Primary color */
+    --primary: #B4DFFF;
+    --primaryHover: #A3CEEE;
+
+    /* Secondary color */
+    --secondary: #E3BEBE;
+    --secondaryHover: #D2B0B0;
+
+    /* Tertiary color */
+    --tertiary: #C7FFDA;
+    --tertiaryHover: #C4F4C7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Quicksand;
+    font-weight: 800;
+    color: var(--fontColor);
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--backgroundColor);
+}
+
+.nav-main {
+    display: flex;
+    height: 95vh;
+    width: 80px;
+    position: fixed;
+    top: 50%;
+    margin-top: -47.5vh;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 0 16px 16px 0;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.5px);
+    -webkit-backdrop-filter: blur(11.5px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.nav-main button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-options {
+    background: transparent;
+    border: none;
+    border-radius: 100%;
+    font-size: 1.6em;
+    font-weight: 900;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+
+.add-card:hover {
+    background-color: var(--primary);
+}
+
+.delete-card:hover {
+    background-color: var(--secondary);
+}
+
+.main {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    margin: 30px 30px 0 110px;
+}
+
+.cards {
+    height: 200px;
+    width: 250px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.text-input {
+    resize: none;
+    outline: none;
+    border: none;
+    background: transparent;
+    z-index: 10;
+    padding: 8px;
+    height: 80%;
+    margin: 12px;
+}
+
+.text-input::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+    border-radius: 16px;
+}
+
+.text-input::-webkit-scrollbar-thumb {
+    border-radius: 16px;
+    background-color: var(--primaryHover);
+}
+
+.scrollColor0::-webkit-scrollbar-thumb { background-color: var(--primaryHover); }
+.scrollColor1::-webkit-scrollbar-thumb { background-color: var(--secondaryHover); }
+.scrollColor2::-webkit-scrollbar-thumb { background-color: var(--tertiaryHover); }
+
+.nav-card,
+.more-options {
+    display: flex;
+    align-items: center;
+    border-top: 1.5px solid var(--backgroundColor);
+}
+.no-show {
+    display: none;
+}
+
+.nav-card button,
+.more-options button {
+    border: none;
+    background-color: transparent;
+}
+
+.nav-card button:nth-child(1),
+.share:nth-child(1) {
+    width: 25%;
+    border-radius: 0 0 0 16px;
+    padding: 8px 0 8px 8px;
+    height: 100%;
+}
+
+.nav-card button:nth-child(2),
+.colors-select-container {
+    width: 50%;
+    padding: 8px 0 8px 0;
+    height: 100%;
+}
+
+.nav-card button:nth-child(3),
+.close-options {
+    width: 25%;
+    border-radius: 0 0 16px 0;
+    padding: 8px 8px 8px 0;
+    height: 100%;
+}
+
+.colors-select-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button.colors-select {
+    width: 1.2em;
+    height: 1.2em;
+    padding: 0;
+    border-radius: 50%;
+    border: solid 1px var(--fontColor);
+}
+
+.delete-button {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    border-radius: inherit;
+    border: inherit;
+    background-color: #E3BEBEDD;
+    z-index: 1000;
+    font-size: 4.5em;
+    transition: all .2s;
+}
+
+.delete-disabled {
+    display: none;
+}
+
+.delete-button:hover {
+    font-size: 6em;
+    background-color: var(--secondary);
+}
+
+.delete-close {
+    position: absolute;
+}
+
+button.colors-select:nth-child(1)       { background: var(--primary); }
+button.colors-select:nth-child(1):hover { background: var(--primaryHover); }
+
+button.colors-select:nth-child(2)       { background: var(--secondary); }
+button.colors-select:nth-child(2):hover { background: var(--secondaryHover); }
+
+button.colors-select:nth-child(3)       { background: var(--tertiary); }
+button.colors-select:nth-child(3):hover { background: var(--tertiaryHover); }
+
+/* Animations */
+
+@keyframes optionMovement {
+    from {
+        transform: translateX(100%);
+    } to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes mainNavMovement {
+    from {
+        transform: translateY(100%);
+    } to {
+        transform: translateY(0);
+    }
+}
+
+.more-options {
+    animation: optionMovement .2s linear;
+}
+
+.nav-card {
+    animation: mainNavMovement .2s linear;
+}
+
+/* Styles for cards themes */
+
+.colorMain0 { background-color: var(--primary); }
+.colorMain1 { background-color: var(--secondary); }
+.colorMain2 { background-color: var(--tertiary); }
+.color0:hover { background-color: var(--primaryHover); }
+.color1:hover { background-color: var(--secondaryHover); }
+.color2:hover { background-color: var(--tertiaryHover); }

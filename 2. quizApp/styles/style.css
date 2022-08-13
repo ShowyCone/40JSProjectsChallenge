@@ -1,0 +1,124 @@
+:root {
+    --fontColor: #555B6E;
+    --backgroundColor: #EAEEEF;
+    --primary: #BEE3DB;
+    --secondary: #E3BEBE;
+    --secondaryHover: #D2B0B0;
+    --secondaryFirstBorder: #E3BEBE;
+    --secondarySecondBorder: #F4CFCF;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--fontColor);
+}
+
+body {
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#quiz {
+    background-color: var(--backgroundColor);
+    border-radius: 20px;
+    text-align: center;
+    width: 450px;
+    min-height: 450px;
+    max-height: 480px;
+    padding: 40px 40px;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+#choices {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.buttons {
+    background: var(--secondary);
+    margin: 8px 0;
+    width: 250px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.0em;
+}
+
+.buttons:hover {
+    background-color: var(--secondaryHover);
+}
+
+.buttons:active {
+    border-top: var(--secondaryFirstBorder) solid 3px;
+    border-right: var(--secondaryFirstBorder) solid 3px;
+    border-bottom: var(--secondarySecondBorder) solid 3px;
+    border-left: var(--secondarySecondBorder) solid 3px;
+}
+
+#progress {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+#question {
+    margin: 20px 0 0 0;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(6, 6, 6, 0.666);
+    display: flex;
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.window-container {
+    background: var(--backgroundColor);
+    border-radius: 8px;
+    display: grid;
+    grid-auto-columns: 100%;
+    height: 180px;
+    margin: auto;
+    padding: 20px;
+    place-items: center;
+    text-align: center;
+    width: 400px;
+}
+
+.show-modal {
+    opacity: 1;
+    pointer-events: unset;
+}
+
+#reset-modal {
+    text-decoration: none;
+    background: var(--secondary);
+    padding: 8px 13px;
+    border-radius: 15px;
+    border: none;
+    font-size: 1em;
+    place-self: center;
+    align-self: flex-end;
+    transition: background .4s;
+}
+
+#reset-modal:hover {
+    background: var(--secondaryHover);
+}

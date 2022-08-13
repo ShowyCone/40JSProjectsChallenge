@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <header>
+        <h1>C A L C U L A T O R</h1>
+    </header>
+    <main class="container">
+        <section class="container__display">
+            <input class="display" id="display" type="text" readonly>
+        </section>
+        <section class="container__buttons">
+            <button onclick="writeNum(1)">1</button>
+            <button onclick="writeNum(2)">2</button>
+            <button onclick="writeNum(3)">3</button>
+            <button onclick="writeNum('+')">+</button>
+            <button onclick="writeNum(4)">4</button>
+            <button onclick="writeNum(5)">5</button>
+            <button onclick="writeNum(6)">6</button>
+            <button onclick="writeNum('-')">-</button>
+            <button onclick="writeNum(7)">7</button>
+            <button onclick="writeNum(8)">8</button>
+            <button onclick="writeNum(9)">9</button>
+            <button onclick="writeNum('*')">*</button>
+            <button onclick="writeNum('.')">.</button>
+            <button onclick="writeNum(0)">0</button>
+            <button onclick="deleteNum()">←</button>
+            <button onclick="writeNum('/')">/</button>
+            <button onclick="writeNum('(')">(</button>
+            <button onclick="writeNum(')')">)</button>  
+            <button onclick="calculate()">=</button>
+            <button class="button__clear" onclick="deleteAll()">C</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

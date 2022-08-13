@@ -1,0 +1,63 @@
+:root {
+    --fontColor: #555B6E;
+    --backgroundColor: #EAEEEF;
+
+    /* Primary color */
+    --primary: #B4DFFF;
+    --primaryHover: #A3CEEE;
+
+    /* Secondary color */
+    --secondary: #E3BEBE;
+    --secondaryHover: #D2B0B0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--fontColor);
+}
+
+body {
+    background-color: var(--backgroundColor);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-container {
+    align-self: center;
+}
+
+.title {
+    margin-bottom: 80px;
+    font-size: 3em;
+}
+
+.main-container {
+    margin-bottom: 130px;
+}
+
+.numbers {
+    display: flex;
+    justify-content: center;
+    font-size: 2.3em;
+}
+
+.buttons button {
+    margin: 20px;
+    font-size: 1.6em;
+    background-color: var(--primary);
+    border: none;
+    height: 40px;
+    width: 140px;
+    border-radius: 15px;
+}
+.buttons button:hover { background-color: var(--primaryHover); }
+.buttons button:active { border: var(--primary) solid 2px; }
+.buttons button:nth-child(2) { background-color: var(--secondary); }
+.buttons button:nth-child(2):hover { background-color: var(--secondaryHover); }
+.buttons button:nth-child(2):active { border: var(--secondary) solid 2px; }
