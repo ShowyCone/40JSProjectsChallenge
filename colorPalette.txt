@@ -1,0 +1,36 @@
+Color Palette for 40 Javascript Projects
+
+Light mode:
+
+Font color: #555B6E
+Background: #EAEEEF
+
+Primary color: #BEE3DB
+Primary color hover: #ADD2CA
+Border primary color(top and right): #BEE3DB
+Border primary color(left and bottom): #CFF4EB
+
+Secondary color: #E3BEBE
+Secondary color hover: #D2B0B0
+Border secondary color(top and right): #E3BEBE
+Border secondary color(left and bottom): #F4CFCF
+
+Var for css:
+:root {
+    --fontColor: #555B6E;
+    --backgroundColor: #EAEEEF;
+
+    /* Primary color */
+    --primary: #B4DFFF;
+    --primaryHover: #A3CEEE;
+
+    /* Secondary color */
+    --secondary: #E3BEBE;
+    --secondaryHover: #D2B0B0;
+
+    /* Tertiary color */
+    --tertiary: #C7FFDA;
+    --tertiaryHover: #C4F4C7;
+}
+
+
