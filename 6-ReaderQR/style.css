@@ -1,0 +1,76 @@
+:root {
+  --fontColor: #555B6E;
+  --backgroundColor: #EAEEEF;
+
+  /* Primary color */
+  --primary: #B4DFFF;
+  --primaryHover: #A3CEEE;
+
+  /* Secondary color */
+  --secondary: #E3BEBE;
+  --secondaryHover: #D2B0B0;
+
+  /* Tertiary color */
+  --tertiary: #C7FFDA;
+  --tertiaryHover: #C4F4C7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--fontColor);
+}
+
+main {
+  background-color: var(--backgroundColor);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  width: 400px;
+  height: 400px;
+  background-color: var(--primary);
+  border-radius: 16px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#result {
+  margin-top: 10px;
+  width: 400px;
+  text-align: center;
+  background-color: var(--primary);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#result:hover {
+  background-color: var(--primaryHover);
+  cursor: pointer;
+}
+
+#copy-to-clipboard {
+  position: absolute;
+  top: -100px;
+  transition: all 1s linear;
+  border-radius: 16px;
+  font-weight: bold;
+  width: 300px;
+  height: 40px;
+  right: calc(50% - 150px);
+  background-color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
